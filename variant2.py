@@ -43,7 +43,7 @@ def main ():
             lines = get_parse_table(soup)
             for line in lines:
                 values = parse_line(line)
-                date = "{:02d}/{:02d}/{}".format(day, month, year)
+                date = "{}-{:02d}-{:02d}".format(year, month, day)
                 write_row(writer, date, values)
                 day += 1
             month += 1
