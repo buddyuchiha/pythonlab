@@ -32,12 +32,12 @@ def main ():
     }
     year = 2008
     month = 1
-    day = 1
+    day = 10
     with open('dataset.csv', mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(['Day', 'Temperature Day', 'Pressure Day','Wind Day', 'Temperature Night','Pressure Night', 'Wind Night'])
         while month <= 12:
-            day = 1
+            day = 10
             url = get_url(year, month)
             soup = get_data(url, headers)
             lines = get_parse_table(soup)
